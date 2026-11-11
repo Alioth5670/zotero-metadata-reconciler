@@ -1,0 +1,16 @@
+<section xmlns="http://www.w3.org/1999/xhtml" id="metadata-provider-pane" class="main-section">
+  <h2>Google Scholar · SerpApi</h2>
+  <p>默认使用 Zotero 内置浏览器后台搜索。可选填 SerpApi API Key，作为后台搜索失败时的备用来源。</p>
+  <p><label for="metadata-serp-key">API Key：</label>
+    <input id="metadata-serp-key" type="password" autocomplete="off" size="48" placeholder="输入新密钥" />
+  </p>
+  <p>
+    <button id="metadata-serp-save" type="button">保存密钥</button>
+    <button id="metadata-serp-clear" type="button">清除密钥并停用</button>
+  </p>
+  <p id="metadata-serp-status" role="status">正在读取设置…</p>
+  <p>密钥由 Zotero 的凭据管理器保存，不写入普通插件首选项。保存设置不会发出付费请求。</p>
+  <p>后续核对会向 Scholar 发送论文标题；启用备用 SerpApi 时，每篇最多 4 次付费 API 调用。</p>
+  <h2>arXiv</h2>
+  <p>arXiv 官方 API 默认启用，无需填写密钥。</p>
+</section>

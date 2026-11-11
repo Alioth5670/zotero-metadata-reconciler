@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title>核对文献类型与元数据</title>
+  <link rel="stylesheet" href="review.css" />
+</head>
+<body>
+  <header>
+    <div>
+      <h1>核对文献类型与元数据</h1>
+      <p>只勾选你确认要写入的字段；附件、批注和笔记不会被修改。</p>
+    </div>
+    <div id="status">准备查询…</div>
+  </header>
+  <section id="provider-settings">
+    <button id="provider-preferences" type="button">插件设置…</button>
+    <span id="provider-status">arXiv 官方 API 已启用；SerpApi 未配置</span>
+    <p>默认后台打开 Scholar。需要人工操作时，使用条目旁的“打开 Scholar 内置窗口”和“读取当前页”。</p>
+  </section>
+  <main id="results"></main>
+  <footer>
+    <button id="undo" type="button">撤销最近一次应用</button>
+    <button id="deep-search" type="button" disabled="disabled">完整查找（最多 25 秒/篇）</button>
+    <span class="spacer"></span>
+    <span id="apply-hint">请先选择候选和字段</span>
+    <button id="close" type="button">关闭</button>
+    <button id="apply" class="primary" type="button" disabled="disabled">应用所选修改</button>
+  </footer>
+  <script src="review.js"></script>
+</body>
+</html>

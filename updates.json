@@ -1,0 +1,13 @@
+{
+  "addons": {
+    "metadata-reconciler@example.com": {
+      "updates": [{
+        "version": "0.1.22",
+        "update_link": "https://github.com/Alioth5670/zotero-metadata-reconciler/releases/download/v0.1.22/metadata-reconciler-zotero10-0.1.22.xpi",
+        "applications": {
+          "zotero": { "strict_min_version": "10.0", "strict_max_version": "10.0.*" }
+        }
+      }]
+    }
+  }
+}

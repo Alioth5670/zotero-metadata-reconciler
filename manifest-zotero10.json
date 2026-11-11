@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Metadata Reconciler for Zotero 10",
+  "version": "0.1.22",
+  "description": "Find versions of a paper, verify publication type and metadata, and preview changes in Zotero.",
+  "author": "Alioth5670",
+  "homepage_url": "https://github.com/Alioth5670/zotero-metadata-reconciler",
+  "applications": {
+    "zotero": {
+      "id": "metadata-reconciler@example.com",
+      "update_url": "https://raw.githubusercontent.com/Alioth5670/zotero-metadata-reconciler/main/updates.json",
+      "strict_min_version": "10.0",
+      "strict_max_version": "10.0.*"
+    }
+  }
+}

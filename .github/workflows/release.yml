@@ -1,0 +1,23 @@
+name: Publish Zotero XPI
+on:
+  push:
+    tags:
+      - 'v*'
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and publish
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $ErrorActionPreference = "Stop"
+          $version = (Get-Content manifest-zotero10.json -Raw | ConvertFrom-Json).version
+          if ($env:GITHUB_REF_NAME -ne "v$version") { throw "Tag does not match manifest" }
+          $xpi = ./build-zotero10.ps1
+          gh release create $env:GITHUB_REF_NAME $xpi --verify-tag --title "Metadata Reconciler $version" --notes-file RELEASE.md
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
